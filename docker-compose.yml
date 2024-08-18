@@ -1,0 +1,36 @@
+version: '3.8'
+
+services:
+  producer:
+    image: producer-app
+    container_name: producer-container
+    ports:
+      - "8080:8080"
+    networks:
+      - app-network
+    depends_on:
+      - consumer
+    environment:
+      - CONSUMER_URL=http://consumer:8081/consume
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
+
+  consumer:
+    image: consumer-app
+    container_name: consumer-container
+    ports:
+      - "8081:8081"
+    networks:
+      - app-network
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
+
+networks:
+  app-network:
+    driver: bridge

@@ -1,0 +1,29 @@
+# Ignore target directories
+**/target/
+
+# Ignore .DS_Store files (commonly used on macOS)
+.DS_Store
+
+# Ignore Maven wrapper files (if using Maven)
+.mvn/
+mvnw
+mvnw.cmd
+
+# Ignore IDE-specific files (common IDEs)
+.idea/
+*.iml
+
+# Ignore log files
+*.log
+
+# Ignore build artifacts
+*.jar
+*.war
+*.class
+
+# Ignore other common files
+*.tmp
+*.swp
+
+# Ignore local environment files
+.env
