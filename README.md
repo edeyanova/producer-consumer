@@ -1,11 +1,59 @@
-Create a prime number selector. 
-For the sake of scalability, the task should be split into 2 services: A Producer and a Consumer.
+# Producer and Consumer Microservices
 
-Producer:
-The producer should generate a stream of random numbers (up to 5 numbers per second / filled stream size of maximum 100 numbers) and send them to the consumer.
-Also, please write down the content of the stream in a csv file so that the result can be verified against it.
+## Overview
 
-Consumer:
-The consumer should consume the stream of random numbers and identify prime numbers from it. 
-The identified prime numbers should be written to a csv file. 
-The order of prime numbers is not important; however, use a “,” as a delimiter between each number.
+This project contains two microservices: Producer and Consumer. 
+
+The Producer generates random numbers and sends them to the Consumer, which identifies prime numbers and writes them to a CSV file. 
+The consumer consumes the stream of random numbers and identifies prime numbers from it.
+The identified prime numbers are written to a csv file with “,” as a delimiter between each number.
+
+Both services are containerized using Docker and orchestrated with Docker Compose.
+
+## Prerequisites
+
+- Docker
+- Docker Compose
+
+## Setup Instructions
+
+### 1. Clone the Repository
+
+First, clone this repository to your local machine:
+
+<code>git clone git clone https://github.com/edeyanova/producer-consumer.git</code>
+
+<code>cd your-repo-name</code>
+
+### 2. Build the Docker Images
+Before running the services, build the Docker images for both Producer and Consumer:
+
+<code>docker-compose build</code>
+
+This command builds the images using the Dockerfiles located in the ./producer and ./consumer directories.
+
+### 3. Start the Services
+Start both services using Docker Compose:
+<code>docker-compose up</code>
+
+Producer will be accessible on port 8080.
+
+Consumer will be accessible on port 8081.
+
+### 4. Stop the Services
+To stop the services, use:
+
+<code>docker-compose down</code>
+
+This command stops and removes all containers defined in the docker-compose.yml file.
+
+### 5. Accessing Logs
+To view the logs for all services:
+
+<code>docker-compose logs</code>
+
+To view logs for a specific service, use:
+
+<code>docker-compose logs producer</code>
+
+<code>docker-compose logs consumer</code>
