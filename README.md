@@ -21,9 +21,9 @@ Both services are containerized using Docker and orchestrated with Docker Compos
 
 Pull the pre-built Docker images from the Docker registry:
 
-<code>docker pull yourusername/producer-app:latest</code>
+<code>docker pull endeyanova/producer-app:latest</code>
 
-<code>docker pull yourusername/consumer-app:latest</code>
+<code>docker pull endeyanova/consumer-app:latest</code>
 
 ### 2. Start the Services
 
