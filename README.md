@@ -17,37 +17,33 @@ Both services are containerized using Docker and orchestrated with Docker Compos
 
 ## Setup Instructions
 
-### 1. Clone the Repository
+### 1. Pull the Docker Images
 
-First, clone this repository to your local machine:
+Pull the pre-built Docker images from the Docker registry:
 
-<code>git clone https://github.com/edeyanova/producer-consumer.git</code>
+<code>docker pull yourusername/producer-app:latest</code>
 
-<code>cd your-repo-name</code>
+<code>docker pull yourusername/consumer-app:latest</code>
 
-### 2. Build the Docker Images
-Before running the services, build the Docker images for both Producer and Consumer:
+### 2. Start the Services
 
-<code>docker-compose build</code>
-
-This command builds the images using the Dockerfiles located in the ./producer and ./consumer directories.
-
-### 3. Start the Services
 Start both services using Docker Compose:
+
 <code>docker-compose up</code>
 
 Producer will be accessible on port 8080.
 
 Consumer will be accessible on port 8081.
 
-### 4. Stop the Services
+### 3. Stop the Services
+
 To stop the services, use:
 
 <code>docker-compose down</code>
 
 This command stops and removes all containers defined in the docker-compose.yml file.
 
-### 5. Accessing Logs
+### 4. Accessing Logs
 To view the logs for all services:
 
 <code>docker-compose logs</code>
