@@ -96,7 +96,6 @@ public class NumberGeneratorService {
             // Remove processed numbers from the queue
             numberQueue.removeAll(batch);
 
-            csvWriterService.writeNumbersToCsv(batch);
             for (int i = 0; i < 5; i++) {
                 try {
                     restTemplate.postForObject(consumerUrl, batch, String.class);
