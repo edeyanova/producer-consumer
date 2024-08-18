@@ -21,7 +21,7 @@ Both services are containerized using Docker and orchestrated with Docker Compos
 
 First, clone this repository to your local machine:
 
-<code>git clone git clone https://github.com/edeyanova/producer-consumer.git</code>
+<code>git clone https://github.com/edeyanova/producer-consumer.git</code>
 
 <code>cd your-repo-name</code>
 
