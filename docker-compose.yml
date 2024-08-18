@@ -2,9 +2,7 @@ version: '3.8'
 
 services:
   producer:
-    build:
-      context: ./producer
-      dockerfile: Dockerfile
+    image: endeyanova/producer-app:latest
     container_name: producer-container
     ports:
       - "8080:8080"
@@ -21,9 +19,7 @@ services:
         max-file: "3"
 
   consumer:
-    build:
-      context: ./consumer
-      dockerfile: Dockerfile
+    image: endeyanova/consumer-app:latest
     container_name: consumer-container
     ports:
       - "8081:8081"
