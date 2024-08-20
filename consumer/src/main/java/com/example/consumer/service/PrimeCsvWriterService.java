@@ -54,7 +54,7 @@ public class PrimeCsvWriterService {
                 file.createNewFile();
             }
 
-            try (FileWriter writer = new FileWriter(csvFilePath, true)) { // Append mode
+            try (FileWriter writer = new FileWriter(csvFilePath, true)) {
                 if (fileHasContent) {
                     writer.append(",").append(primeData);
                 } else {
