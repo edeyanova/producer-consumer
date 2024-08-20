@@ -17,13 +17,15 @@ Both services are containerized using Docker and orchestrated with Docker Compos
 
 ## Setup Instructions
 
-### 1. Pull the Docker Images
+### 1. Download the docker-compose.yml file
 
-Pull the pre-built Docker images from the Docker registry:
+Download the docker-compose.yml file directly to your local machine.
 
-<code>docker pull endeyanova/producer-app:latest</code>
+It is located here: https://github.com/edeyanova/producer-consumer/blob/main/docker-compose.yml
 
-<code>docker pull endeyanova/consumer-app:latest</code>
+You can download it using the following command:
+
+<code>curl -O https://raw.githubusercontent.com/edeyanova/producer-consumer/main/docker-compose.yml</code>
 
 ### 2. Start the Services
 
